@@ -14,8 +14,8 @@ exports.SearchProductPage = class SearchProductPage {
         await this.searchButton.click();
     }
 
-    async getSearchResult() {
-        return await this.searchResult.textContent();
+    async verifySearchResult(productName) {
+        await expect(this.searchResult).toHaveText(productName);
     }
 
     async viewProductDetailPage() {

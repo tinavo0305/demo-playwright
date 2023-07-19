@@ -12,16 +12,15 @@ exports.ShoppingCartPage = class ShoppingCartPage {
 
     }
 
-    async getShoppingCartInfo() {
-        return {
-            "productName": await this.productNameInCart.textContent(),
-            "productQty": await this.productQtyInCart.getAttribute("value"),
-            "productPrice": await this.productPrice.textContent(),
-            "totalPrice": await this.totalPrice.textContent()
-        };
+    async verifyShoppingCartInfo(expectedProductDetails) {
+        await expect(this.productNameInCart).toHaveText(expectedProductDetails.productName);
+        await expect(this.productPrice).toContainText(expectedProductDetails.productPrice);
+        await expect(this.productQtyInCart).toHaveValue(expectedProductDetails.productQty);
+        await expect(this.totalPrice).toHaveText(expectedProductDetails.totalPrice);
     }
 
 };
+
 
 
 

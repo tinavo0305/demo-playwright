@@ -31,7 +31,7 @@ exports.Registerpage = class Registerpage{
         await this.registerButton.click();
    }
 
-  async getSuccessMessage() {
-        return  await this.successMessage.textContent();   
+  async verifySuccessMessage(message) {
+        await expect(this.successMessage).toHaveText(message);
     }
 };

@@ -16,7 +16,7 @@ exports.Loginpage = class Loginpage {
         await this.loginButton.click();
     };
 
-    async isMyAccountVisible() {
-        return await this.myAccountMenu.toBeVisible();
+    async verifyMyAccountVisible() {
+        await expect(this.myAccountMenu).toBeVisible();
     };
 };

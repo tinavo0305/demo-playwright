@@ -14,29 +14,28 @@ exports.ProductDetailPage = class ProductDetailPage {
         this.shoppingCartLink = page.locator("//div[@id='bar-notification']//p/a");
     }
     // verify Product Detail Page
-    async getProductName() {
-        return await this.productName.textContent();
+    async verifyProductName(productTitle) {
+        await expect(this.productName).toHaveText(productTitle);
     }
 
-    async getProductPrice() {
-        const price = await this.productPrice.textContent();
-        return price.trim();
+    async verifyProductPrice(unitPrice) {
+        await expect(this.productPrice).toContainText(unitPrice);
     }
 
-    async isProductImageVisible() {
-        return await this.productImage.isVisible();
+    async verifyProductImageVisible() {
+        await expect(this.productImage).toBeVisible();
     }
 
-    async getProductQuantity() {
-        return await this.productQty.getAttribute("value");
+    async verifyProductQuantity(qty) {
+        await expect(this.productQty).toHaveValue(qty);
     }
 
     async addProducToCart() {
         await this.addToCartButton.click();
     }
 
-    async getSuccessMessage() {
-        return await this.successMessage.textContent();
+    async verifySuccessMessage(message) {
+        await expect(this.successMessage).toHaveText(message);
     }
     
     async clickShoppingCartLink() {
