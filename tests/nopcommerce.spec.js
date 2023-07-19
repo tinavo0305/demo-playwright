@@ -1,6 +1,6 @@
 
 const { test, expect } = require('@playwright/test');
-const { Homepage } = require('../pageObjects/homepage.js'); // import pageObject to be used
+const { Homepage } = require('../pageObjects/homepage.js');
 const { Registerpage } = require('../pageObjects/registerpage.js');
 const { Loginpage } = require('../pageObjects/loginpage.js');
 const { SearchProductPage } = require('../pageObjects/searchproductpage.js');
