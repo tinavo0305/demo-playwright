@@ -6,13 +6,13 @@ This project is used to demonstrate my expertise in automated testing with Playw
 
 ### Description: 
 - Use Playwright framework to write an **end-to-end testing** flow for an **e-commerce web application**
-- **Use Page Object models** to manage UI elements and methods to interact with those elements separately from the test classes. Each page of this web application is represented by each page object class
+- Use **Page Object models** to manage UI elements and methods to interact with those elements separately from the test classes. Each page of this web application is represented by each page object class
 - **Test data** is also managed separately from the test classes. Using **JSON objects** to manage data objects such as user accounts and product details
 - Use Command-line interface (CLI) to run the test
 - Use **Git** to manage code versioning and push code to GitHub
 - Use **GitHub Actions** to demonstrate CI workflow
 ### Test scenarios:
-This project will develop an e2e automated test flow for the e-commerce site (https://demo.nopcommerce.com/). The test flow contains the following test cases:
+This project will develop an e2e automated test flow for the e-commerce site (https://demo.nopcommerce.com/). The test flow contains the following test steps:
 1. Register an account
 2. Login with this account
 3. Search for a product
